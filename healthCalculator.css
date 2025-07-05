@@ -1,0 +1,72 @@
+:host(){
+    --dark-blue:#0b0d21;
+    --light-white:#fafafa;
+    --light-blue:#4f7df9;
+    --light-pink: #e91e63;
+    --dull-blue:#1d1e33;
+    --size-16:16px;
+    --size-14:14px;
+    --size-12:12px; 
+    
+}
+.box{
+    max-width: 520px;
+    text-align: center;
+    margin: auto;
+    background-color: var(--dark-blue);
+    color: var(--light-white);
+    padding: var(--size-16);
+    border-radius: 38px;
+}
+.app{
+    min-height: 100vh;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-image: url(/sfsites/c/resource/healthappBackground);
+}
+h1{
+    
+    font-size: 36px;
+    padding: 20px 0;
+    font-weight: bold;
+}
+.info-wrapper{
+    background-color: var(--dull-blue);
+    padding: var(--size-16);
+    border-bottom-left-radius: 38px;
+    border-bottom-right-radius: 38px;
+    font-size: var(--size-14);
+    text-align: center;
+}
+h2{
+    font-size: 26px;
+    color: var(--light-pink);
+}
+label{
+    font-size: 20px;
+    color: var(--light-white);
+    font-weight: bold;
+}
+input{
+    font-size: 16px;
+    padding: 8px;
+    color: var(--dull-blue);
+}
+
+.this-feild-required{
+    font-size: 16px;
+    text-align: left;
+}
+.calculator{
+    font-size: 20px;
+    font-weight: bold;
+    padding: 12px;
+    background: var(--light-pink);
+    color: var(--light-white);
+    border-color:var(--light-pink);
+}
+.result_bmi,.result_bmi_type{
+    font-size: 25px;
+     font-weight: bold;
+    color: var(--light-blue);
+}
