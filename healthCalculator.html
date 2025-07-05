@@ -1,0 +1,55 @@
+<template>
+    <div class="app slds-p-around_medium">
+        <div class="box"> 
+            <h1>Health Check Calculator</h1>
+            <template if:true={resValue}>
+                <h2>Your Health-Check Value is:</h2>
+                <div class="result_bmi">{healthcheck}</div>
+                <h2>So You are:</h2>
+                <div class="result_bmi_type slds-m-bottom_medium"> {resValue} </div>
+                <button class="calculator slds-button slds-m-bottom_medium slds-button_neutral slds-button_stretch" onclick={recalculate}>Re-Calculate</button>
+            </template>
+
+            <template if:false={resValue}>
+                <!--form-->
+                <form onsubmit={onsumbitHandler}>
+                    <div class="slds-form-element slds-has-error">
+                        <label class="slds-form-element__label" for="text-input-id-1
+                        required">Height(cm)</label>
+                        <div class="slds-form-element__control">
+                            <input type="number" id="text-input-id-1" min="0" name="height" value="height" onchange={handleonchange} placeholder="Enter your height in cm" required="" pattern="\d*" inputmode="numeric" aria-describedby="error-message-unique-id" class="slds-input" aria-invalid="true" />
+                        </div>
+                        <div class="this-feild-required slds-form-element__help" id="error-message-unique-id">This field is required</div>
+                    </div>
+
+                    <div class="slds-form-element slds-has-error slds-m-bottom_medium">
+                        <label class="slds-form-element__label" for="text-input-id-1
+                        required">Weight(kg)</label>
+                        <div class="slds-form-element__control">
+                        <input type="number" id="text-input-id-2" min="0" name="weight" value="weight" onchange={handleonchange} placeholder="Enter your weight in kg" 
+                        required="" pattern="\d*" inputmode="numeric" aria-describedby="error-message-unique-id" class="slds-input" aria-invalid="true" />
+                        </div>
+                        <div class="this-feild-required slds-form-element__help" id="error-message-unique-id2">This field is required</div>
+                    </div>
+                    <button class="calculator slds-button slds-m-bottom_medium slds-button_neutral slds-button_stretch">Calculate</button>
+                </form>
+            </template>
+            
+            <div class="info-wrapper">
+                <h2>What Your Health Check Means</h2>
+                <p class="slds-m-bottom_medium">Once your measured your Health Check, You can Determine your Healthy weight range, if your Health Check is:</p>
+                <h3 class="slds-text-color_error slds-text-heading_medium" >Under 18.5</h3>
+                <p class="slds-m-bottom_medium">you are very underweight and possibilty mainourished.</p>
+                <h3 class="slds-text-color_success slds-text-heading_medium">Between 18.5 to 24.9</h3>
+                <p class="slds-m-bottom_medium">you have a healthy weight range for young and middle-aged adults.</p>
+                <h3 class="slds-text-color_error slds-text-heading_medium">Between 25 to 29.9</h3>
+                <p class="slds-m-bottom_medium">you are overweight and you need to eat more.</p>
+                <h3 class="slds-text-color_error slds-text-heading_medium">Over 30</h3>
+                <p>you are obese and you need to eat less.</p>
+                <p>Keep on doing your exercise, eating what you want and taking care of your health will make you feel better.</p>
+
+            </div>
+        </div>
+
+    </div>
+</template>
